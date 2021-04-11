@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>catalog</title>
+</head>
+<body>
+<tr th:each="house : ${houses}" >
+    <td th:utext="${house.getId()}"></td>
+    <td th:utext="${house.getName()}"></td>
+    <td th:utext="${house.getCost()}"></td>
+    <td th:utext="${house.getFloorsCount()}"></td>
+    <td th:utext="${house.getGeneralArea()}"></td>
+    <td th:utext="${house.getStyle()}"></td>
+
+    <form th:action="@{/house/{house_id}/edit(house_id=${house.getId()})}">
+        <input style="
+                    border-radius: 10px; background-color: #007BFF;" type="submit" value="Update"/>
+    </form>
+
+</tr>
+
+
+</body>
+</html>
