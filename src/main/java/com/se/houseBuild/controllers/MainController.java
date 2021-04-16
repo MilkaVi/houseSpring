@@ -28,9 +28,10 @@ public class MainController {
 
     @GetMapping()
     public String catalog(Model model){
+                houseRepository.save(new House("Каркасный дом Адмирал", 205 ,
+                5, 2, "Классический", 6149000));
         Iterable<House> a =  houseRepository.findAll();
         model.addAttribute("houses", houseRepository.findAll());
-        //model.addAllAttributes(,(Collection<?>) houseRepository.findAll());
         return "catalog";
     }
 

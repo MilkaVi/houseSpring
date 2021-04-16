@@ -1,26 +1,92 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>catalog</title>
+    <meta charset="utf-8">
+    <title>&Gcy;&lcy;&acy;&vcy;&ncy;&acy;&yacy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&acy;</title>
+    <!--if IEmeta(http-equiv='X-UA-Compatible', content='IE = edge')-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="../../resources/static/css/styles.css">
 </head>
-<body>
-<tr th:each="house : ${houses}" >
-    <td th:utext="${house.getId()}"></td>
-    <td th:utext="${house.getName()}"></td>
-    <td th:utext="${house.getCost()}"></td>
-    <td th:utext="${house.getFloorsCount()}"></td>
-    <td th:utext="${house.getGeneralArea()}"></td>
-    <td th:utext="${house.getStyle()}"></td>
+<div class="wrapper">
+    <div class="content">
+        <div class="section__content">
+            <div class="container">
+                <div class="row">
+                    <div class="filter show-if-tablet">
+                        <div class="filter__header"><span class="filter__titel">&Fcy;&icy;&lcy;&softcy;&tcy;&rcy; </span></div>
+                        <div class="filter__body">
+                            <div class="filter-item">
+                                <div class="filter-item__header"><span class="filter-item__titel">&Tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy;</span></div>
+                                <div class="filter-item__body">
+                                    <ul class="filter-list">
+                                        <li class="filter-list__item"><label class="checkbox"><input type="checkbox"><span class="checkbox__custom"></span>
+                                            <div class="checkbox__body"><span class="checkbox__text">&Kcy;&acy;&rcy;&kcy;&acy;&scy;&ncy;&ycy;&jcy;</span></div>
+                                        </label><span class="count-text">456</span></li>
+                                        <li class="filter-list__item"><label class="checkbox"><input type="checkbox"><span class="checkbox__custom"></span>
+                                            <div class="checkbox__body"><span class="checkbox__text">&Kcy;&acy;&rcy;&kcy;&acy;&scy;&ncy;&ycy;&jcy;</span></div>
+                                        </label><span class="count-text">456</span></li>
+                                        <li class="filter-list__item"><label class="checkbox"><input type="checkbox"><span class="checkbox__custom"></span>
+                                            <div class="checkbox__body"><span class="checkbox__text">&Kcy;&acy;&rcy;&kcy;&acy;&scy;&ncy;&ycy;&jcy;</span></div>
+                                        </label><span class="count-text">456</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <div class="filter-item__header"><span class="filter-item__titel">&Tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy;</span></div>
+                                <div class="filter-item__body">
+                                    <div class="filter-price__inputs"><label class="filter-price__label"><span class="filter-price__text">&ocy;&tcy; </span><input class="filter-price__input" id="-1" type="number" placeholder="500" min="500" max="99999"><span class="filter-price__text">$ </span></label><label class="filter-price__label"><span class="filter-price__text">&dcy;&ocy; </span><input class="filter-price__input" id="-2" type="number" placeholder="99999" min="500" max="99999"><span class="filter-price__text">$ </span></label></div>
+                                    <div class="filter-slider" id="range-slider"></div>
+                                </div>
+                            </div>
+                            <div class="filter-item">
+                                <div class="filter-item__header"><span class="filter-item__titel">&Tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy;</span></div>
+                                <div class="filter-item__body"></div>
+                            </div>
+                            <div class="filter-item">
+                                <div class="filter-item__header"><span class="filter-item__titel">&Tcy;&iecy;&khcy;&ncy;&ocy;&lcy;&ocy;&gcy;&icy;&icy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy;</span></div>
+                                <div class="filter-item__body"></div>
+                            </div>
+                        </div>
+                        <div class="filter__footer"><button class="btn"><span>&Pcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&softcy;</span><span class="count-text">987</span></button><button class="btn clear"><span>&Ocy;&chcy;&icy;&scy;&tcy;&icy;&tcy;&softcy;</span></button></div>
+                    </div>
+                    <div class="catalog">
+                        <ul class="products">
+                            <li class="product-wrapper"><a class="product" th:href="@{/house/{house_id}/edit(house_id=${houses.iterator().next().getId()})}"><img src="../../resources/1.jpg"/> </a></li>
 
-    <form th:action="@{/house/{house_id}/edit(house_id=${house.getId()})}">
-        <input style="
-                    border-radius: 10px; background-color: #007BFF;" type="submit" value="Update"/>
-    </form>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                            <li class="product-wrapper"><a class="product" href=""></a></li>
+                        </ul>
+<!--                        <tr th:each="house : ${houses}" >-->
+<!--                            <td th:utext="${house.getId()}"></td>-->
+<!--                            <td th:utext="${house.getName()}"></td>-->
+<!--                            <td th:utext="${house.getCost()}"></td>-->
+<!--                            <td th:utext="${house.getFloorsCount()}"></td>-->
+<!--                            <td th:utext="${house.getGeneralArea()}"></td>-->
+<!--                            <td th:utext="${house.getStyle()}"></td>-->
 
-</tr>
+<!--                            <form th:action="@{/house/{house_id}/edit(house_id=${house.getId()})}">-->
+<!--                                <input style="-->
+<!--                    border-radius: 10px; background-color: #007BFF;" type="submit" value="Update"/>-->
+<!--                            </form>-->
+
+<!--                        </tr>-->
 
 
-</body>
-</html>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../../resources/static/js/vendor/libs.js"></script>
+<script src="../../resources/static/js/nouislider.js"></script>
+<script src="../../resources/static/js/main.js"></script>
